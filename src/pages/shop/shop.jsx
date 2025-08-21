@@ -8,10 +8,12 @@ const Shop = ()=>{
     return(
         <div>
             <h1>Shop</h1>
-            {PRODUCTS.map((p)=>{
+           <div className="row">
+           {PRODUCTS.map((p)=>{
                 if(cartItem.some((i)=>i.id === p.id && i.count > 0))
                 return <Product data={p}/>
             })}
+           </div>
         </div>
     )
 }
